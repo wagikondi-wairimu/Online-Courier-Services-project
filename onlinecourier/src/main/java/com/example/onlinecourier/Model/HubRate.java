@@ -8,13 +8,11 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Company {
+public class HubRate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String address;
-    private String phone;
-
+    private Long id ;
+    private  Long hubName;
+    private Double rate;
 
 }
