@@ -3,22 +3,17 @@ package com.example.onlinecourier.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
-
 @Entity
 @Data
-public class Order {
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name="product_id")
     private Product product;
-    private  Integer quantity;
-    private String status;
-    private  Date orderDate = new Date();
-
-
+    private String reviewText;
+    private Integer rating;
 
 
 }
