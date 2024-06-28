@@ -8,13 +8,9 @@ import lombok.Data;
 
 @Data
 @Entity
-
-
-public class Courier {
-    @jakarta.persistence.Id
+public class Company {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    private String name;
-    private Double price;
+    private Long id;
 
 }
