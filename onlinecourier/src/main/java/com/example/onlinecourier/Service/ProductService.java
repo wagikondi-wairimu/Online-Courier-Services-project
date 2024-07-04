@@ -32,8 +32,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public  Product createProduct(Product product)
+    public  Product createProduct(Product product){
         return productRepository.save();
+    }
+
 public Order buyProduct(Long productId,Integer quantity){
     Optional<Product>productOptional=productRepository.findById(productId);
     if (productOptional.isPresent()){

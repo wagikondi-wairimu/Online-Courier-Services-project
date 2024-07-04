@@ -18,7 +18,7 @@ public List<Product>getAllProducts(){
 
    }
 @PostMapping("/{productId}/buy")
-    public Order buyProduct(@PathVariable Long productId,RequestParam Integer quantity){
+    public Order buyProduct(@PathVariable Long productId,@RequestParam  Integer quantity){
     return productService.buyProduct(productId,quantity);
 }
 
