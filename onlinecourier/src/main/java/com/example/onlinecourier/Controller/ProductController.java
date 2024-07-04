@@ -42,5 +42,16 @@ public List<Product>getAllProducts(){
     public DeliveryDetails saveDeliveryDetails(@RequestBody DeliveryDetails deliveryDetails){
     return productService.saveDeliveryDetails(deliveryDetails);
 }
-
+@PostMapping("/nondelivery")
+    public  NonDeliveryDetails saveNonDeliveryDetails(@RequestBody NonDeliveryDetails nonDeliveryDetails){
+    return  productService.saveDeliveryDetails(nonDeliveryDetails);
+}
+@PostMapping("/review")
+    public Review addReview(@RequestBody Review review){
+    return productService.addReview(review);
+}
+@GetMapping("/{productId}/review")
+    public List<Review>getReviewByProductId(@PathVariable long productId){
+    return productService.getReviewsByProductId(productId);
+}
 }
