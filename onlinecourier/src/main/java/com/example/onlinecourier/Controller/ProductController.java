@@ -44,7 +44,7 @@ public List<Product>getAllProducts(){
 }
 @PostMapping("/nondelivery")
     public  NonDeliveryDetails saveNonDeliveryDetails(@RequestBody NonDeliveryDetails nonDeliveryDetails){
-    return  productService.saveDeliveryDetails(nonDeliveryDetails);
+    return  productService.saveNonDeliveryDetails(nonDeliveryDetails);
 }
 @PostMapping("/review")
     public Review addReview(@RequestBody Review review){
