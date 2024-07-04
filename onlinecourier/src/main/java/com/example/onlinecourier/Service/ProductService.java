@@ -1,7 +1,6 @@
 package com.example.onlinecourier.Service;
 
-import com.example.onlinecourier.Model.Order;
-import com.example.onlinecourier.Model.Product;
+import com.example.onlinecourier.Model.*;
 import com.example.onlinecourier.Repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,11 +28,12 @@ public class ProductService {
     private ReviewRepository reviewRepository;
     // retrieve all products
     public List<Product>getAllProducts(){
+
         return productRepository.findAll();
     }
 
-    public  Product createProduct(Product product){
-        return productRepository.save();
+    public  Product addProduct(Product product){
+        return productRepository.save(product);
     }
 
 public Order buyProduct(Long productId,Integer quantity){

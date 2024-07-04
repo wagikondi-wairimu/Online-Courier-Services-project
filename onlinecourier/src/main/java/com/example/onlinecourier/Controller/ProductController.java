@@ -35,7 +35,7 @@ public List<Product>getAllProducts(){
     return  productService.getCompanyDetails();
 }
 @GetMapping("/hubrates")
-    public List<HubRate> getHubRate(){
+    public List<HubRate> getHubRateS(){
     return productService.getHubRates();
 }
 @PostMapping("/delivery")
