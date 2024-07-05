@@ -1,10 +1,14 @@
 package com.example.onlinecourier.Model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
